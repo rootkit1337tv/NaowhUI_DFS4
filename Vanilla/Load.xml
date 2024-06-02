@@ -1,0 +1,6 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Include file ="Data\Load_Data.xml"/>
+	<Include file ="Installer\Load_Installer.xml"/>
+	<Include file ="Options\Load_Options.xml"/>
+	<Include file ="Setup\Load_Setup.xml"/>
+</Ui>
