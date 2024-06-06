@@ -244,7 +244,7 @@ NUI.options = {
 					name = "Load Profiles",
 					desc = "Load your selected NaowhUI profiles onto this character",
 					hidden = function()
-						if NUI:IsAddOnEnabled("ElvUI") or not NUI.db.global.profiles then
+						if NUI:IsAddOnEnabled("ElvUI") or (not NUI:IsAddOnEnabled("BigWigs") and not NUI:IsAddOnEnabled("Details") and not NUI:IsAddOnEnabled("HidingBar") and not NUI:IsAddOnEnabled("MRT") and not NUI:IsAddOnEnabled("NameplateAuras") and not NUI:IsAddOnEnabled("OmniCD") and not NUI:IsAddOnEnabled("Plater") and not NUI:IsAddOnEnabled("WarpDeplete") and not NUI:IsAddOnEnabled("WeakAuras")) or not NUI.db.global.profiles then
 							return true
 						end
 					end,
