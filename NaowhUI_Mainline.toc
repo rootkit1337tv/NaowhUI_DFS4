@@ -3,7 +3,7 @@
 ## Author: rootkit1337
 ## Version: 20240602.01
 ## SavedVariables: NaowhDB
-## Interface: 100207
+## Interface: 100207, 110000
 ## AddonCompartmentFunc: NaowhUI_AddonCompartmentFunc
 ## IconTexture: Interface\AddOns\NaowhUI\Core\Media\Textures\LogoAddon
 
