@@ -51,7 +51,13 @@ function NUI:RunInstaller()
 
 		E:GetModule("PluginInstaller"):Queue(self.InstallerData)
 	else
-		InterfaceOptionsFrame_OpenToCategory("NaowhUI")
+		local InterfaceOptionsFrame_OpenToCategory = InterfaceOptionsFrame_OpenToCategory
+
+		if InterfaceOptionsFrame_OpenToCategory then
+			InterfaceOptionsFrame_OpenToCategory("NaowhUI")
+		else
+			Settings.OpenToCategory("NaowhUI")
+		end
 	end
 end
 
