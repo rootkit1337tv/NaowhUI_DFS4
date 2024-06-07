@@ -105,7 +105,7 @@ NUI.InstallerData = {
 				PluginInstallFrame.Desc1:SetText("Click on the button below to select your Class WeakAuras.")
 				PluginInstallFrame.Option1:Show()
 				PluginInstallFrame.Option1:SetScript("OnClick", function()
-					InterfaceOptionsFrame_OpenToCategory("NaowhUI")
+					NUI:OpenToCategory()
 					PluginInstallFrame:SetFrameLevel(279)
 					PluginInstallFrame:SetFrameStrata("MEDIUM")
 				end)
