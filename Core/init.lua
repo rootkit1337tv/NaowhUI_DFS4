@@ -24,6 +24,8 @@ end
 function NUI:OnInitialize()
 	local LibStub = LibStub
 	local IncompatibleAddOns = {
+		"ElvUI_SLE",
+		"ElvUI_WindTools",
 		"NaowhUI_Installer",
 		"SharedMedia_Naowh"
 	}
