@@ -103,3 +103,5 @@ LSM:Register(MediaType_SOUND, "|cff0091edTurn -Naowh|r", [[Interface\Addons\Naow
 
 LSM:Register(MediaType_STATUSBAR, "ElvUI Blank",				[[Interface\Addons\NaowhUI\Core\Media\Textures\White8x8]])
 LSM:Register(MediaType_STATUSBAR, "Melli",				[[Interface\Addons\NaowhUI\Core\Media\Textures\Melli]])
+LSM:Register(MediaType_STATUSBAR, "NaowhMouseover",				[[Interface\Addons\NaowhUI\Core\Media\Textures\NaowhMouseover]])
+LSM:Register(MediaType_STATUSBAR, "NaowhTarget",				[[Interface\Addons\NaowhUI\Core\Media\Textures\NaowhTarget]])
