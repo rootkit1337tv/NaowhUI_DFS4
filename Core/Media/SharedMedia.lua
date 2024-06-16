@@ -7,7 +7,7 @@ local MediaType_STATUSBAR = LSM.MediaType.STATUSBAR
 local MediaType_SOUND = LSM.MediaType.SOUND
 
 LSM:Register(MediaType_FONT, "Naowh",					[[Interface\Addons\NaowhUI\Core\Media\Fonts\Naowh.ttf]],							koKR + ruRU + zhCN + zhTW + western)
-LSM:Register(MediaType_FONT, "GothamNarrowUltra",					[[Interface\Addons\NaowhUI\Core\Media\Fonts\GothamNarrowUltra.ttf]],							koKR + ruRU + zhCN + zhTW + western)
+LSM:Register(MediaType_FONT, "GothamNarrowUltra",		[[Interface\Addons\NaowhUI\Core\Media\Fonts\GothamNarrowUltra.ttf]],				koKR + ruRU + zhCN + zhTW + western)
 
 LSM:Register(MediaType_SOUND, "|cff0091ed1 -Naowh|r", [[Interface\Addons\NaowhUI\Core\Media\Sounds\1 -Naowh.ogg]])
 LSM:Register(MediaType_SOUND, "|cff0091ed2 -Naowh|r", [[Interface\Addons\NaowhUI\Core\Media\Sounds\2 -Naowh.ogg]])
@@ -101,7 +101,9 @@ LSM:Register(MediaType_SOUND, "|cff0091edTotem -Naowh|r", [[Interface\Addons\Nao
 LSM:Register(MediaType_SOUND, "|cff0091edTrap -Naowh|r", [[Interface\Addons\NaowhUI\Core\Media\Sounds\Trap -Naowh.ogg]])
 LSM:Register(MediaType_SOUND, "|cff0091edTurn -Naowh|r", [[Interface\Addons\NaowhUI\Core\Media\Sounds\Turn -Naowh.ogg]])
 
-LSM:Register(MediaType_STATUSBAR, "ElvUI Blank",				[[Interface\Addons\NaowhUI\Core\Media\Textures\White8x8]])
-LSM:Register(MediaType_STATUSBAR, "Melli",				[[Interface\Addons\NaowhUI\Core\Media\Textures\Melli]])
-LSM:Register(MediaType_STATUSBAR, "NaowhMouseover",				[[Interface\Addons\NaowhUI\Core\Media\Textures\NaowhMouseover]])
-LSM:Register(MediaType_STATUSBAR, "NaowhTarget",				[[Interface\Addons\NaowhUI\Core\Media\Textures\NaowhTarget]])
+LSM:Register(MediaType_STATUSBAR, "ElvUI Blank",			[[Interface\Addons\NaowhUI\Core\Media\Textures\White8x8]])
+LSM:Register(MediaType_STATUSBAR, "Melli",					[[Interface\Addons\NaowhUI\Core\Media\Textures\Melli]])
+LSM:Register(MediaType_STATUSBAR, "Naowh",					[[Interface\Addons\NaowhUI\Core\Media\Textures\Naowh]])
+LSM:Register(MediaType_STATUSBAR, "NaowhMouseover",			[[Interface\Addons\NaowhUI\Core\Media\Textures\NaowhMouseover]])
+LSM:Register(MediaType_STATUSBAR, "NaowhReverse",			[[Interface\Addons\NaowhUI\Core\Media\Textures\NaowhReverse]])
+LSM:Register(MediaType_STATUSBAR, "NaowhTarget",			[[Interface\Addons\NaowhUI\Core\Media\Textures\NaowhTarget]])
