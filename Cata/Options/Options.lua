@@ -1,6 +1,7 @@
 local NaowhUI = select(2, ...)
 local NUI = unpack(NaowhUI)
 
+local C_AddOns_IsAddOnLoaded = C_AddOns.IsAddOnLoaded
 local ReloadUI = ReloadUI
 
 NUI.options = {
@@ -11,7 +12,7 @@ NUI.options = {
 			name = "AddOn profiles",
 			order = 1,
 			hidden = function()
-				if NUI:IsAddOnEnabled("ElvUI") or (not NUI:IsAddOnEnabled("BigWigs") and not NUI:IsAddOnEnabled("Details") and not NUI:IsAddOnEnabled("HidingBar") and not NUI:IsAddOnEnabled("MRT") and not NUI:IsAddOnEnabled("NameplateAuras") and not NUI:IsAddOnEnabled("Plater") and not NUI:IsAddOnEnabled("WeakAuras")) then
+				if C_AddOns_IsAddOnLoaded("ElvUI") or (not C_AddOns_IsAddOnLoaded("BigWigs") and not C_AddOns_IsAddOnLoaded("Details") and not C_AddOns_IsAddOnLoaded("HidingBar") and not C_AddOns_IsAddOnLoaded("MRT") and not C_AddOns_IsAddOnLoaded("NameplateAuras") and not C_AddOns_IsAddOnLoaded("Plater") and not C_AddOns_IsAddOnLoaded("WeakAuras")) then
 					return true
 				end
 			end,
@@ -21,7 +22,7 @@ NUI.options = {
 					name = "BigWigs",
 					desc = "Setup BigWigs",
 					hidden = function()
-						if not NUI:IsAddOnEnabled("BigWigs") then
+						if not C_AddOns_IsAddOnLoaded("BigWigs") then
 							return true
 						end
 					end,
@@ -35,7 +36,7 @@ NUI.options = {
 					name = "Details",
 					desc = "Setup Details",
 					hidden = function()
-						if not NUI:IsAddOnEnabled("Details") then
+						if not C_AddOns_IsAddOnLoaded("Details") then
 							return true
 						end
 					end,
@@ -49,7 +50,7 @@ NUI.options = {
 					name = "HidingBar",
 					desc = "Setup HidingBar",
 					hidden = function()
-						if not NUI:IsAddOnEnabled("HidingBar") then
+						if not C_AddOns_IsAddOnLoaded("HidingBar") then
 							return true
 						end
 					end,
@@ -63,7 +64,7 @@ NUI.options = {
 					name = "MRT",
 					desc = "Setup MRT",
 					hidden = function()
-						if not NUI:IsAddOnEnabled("MRT") then
+						if not C_AddOns_IsAddOnLoaded("MRT") then
 							return true
 						end
 					end,
@@ -77,7 +78,7 @@ NUI.options = {
 					name = "NameplateAuras",
 					desc = "Setup NameplateAuras",
 					hidden = function()
-						if not NUI:IsAddOnEnabled("NameplateAuras") then
+						if not C_AddOns_IsAddOnLoaded("NameplateAuras") then
 							return true
 						end
 					end,
@@ -91,7 +92,7 @@ NUI.options = {
 					name = "Plater",
 					desc = "Setup Plater",
 					hidden = function()
-						if not NUI:IsAddOnEnabled("Plater") then
+						if not C_AddOns_IsAddOnLoaded("Plater") then
 							return true
 						end
 					end,
@@ -105,7 +106,7 @@ NUI.options = {
 					name = "WeakAuras",
 					desc = "Setup WeakAuras",
 					hidden = function()
-						if not NUI:IsAddOnEnabled("WeakAuras") then
+						if not C_AddOns_IsAddOnLoaded("WeakAuras") then
 							return true
 						end
 					end,
@@ -121,7 +122,7 @@ NUI.options = {
 			name = "Class WeakAuras",
 			order = 2,
 			hidden = function()
-				if not NUI:IsAddOnEnabled("WeakAuras") then
+				if not C_AddOns_IsAddOnLoaded("WeakAuras") then
 					return true
 				end
 			end,
@@ -143,7 +144,7 @@ NUI.options = {
 					name = "Hunter",
 					desc = "Import the Hunter Class WeakAura",
 					type = "execute",
-					func = function()WeakAuras.Import(NUI.WeakAurasHunterData) end
+					func = function() WeakAuras.Import(NUI.WeakAurasHunterData) end
 				},
 				mage = {
 					name = "Mage",
@@ -198,7 +199,7 @@ NUI.options = {
 					name = "Load Profiles",
 					desc = "Load your selected NaowhUI profiles onto this character",
 					hidden = function()
-						if NUI:IsAddOnEnabled("ElvUI") or (not NUI:IsAddOnEnabled("BigWigs") and not NUI:IsAddOnEnabled("Details") and not NUI:IsAddOnEnabled("HidingBar") and not NUI:IsAddOnEnabled("MRT") and not NUI:IsAddOnEnabled("NameplateAuras") and not NUI:IsAddOnEnabled("Plater") and not NUI:IsAddOnEnabled("WeakAuras")) or not NUI.db.global.profiles then
+						if C_AddOns_IsAddOnLoaded("ElvUI") or (not C_AddOns_IsAddOnLoaded("BigWigs") and not C_AddOns_IsAddOnLoaded("Details") and not C_AddOns_IsAddOnLoaded("HidingBar") and not C_AddOns_IsAddOnLoaded("MRT") and not C_AddOns_IsAddOnLoaded("NameplateAuras") and not C_AddOns_IsAddOnLoaded("Plater") and not C_AddOns_IsAddOnLoaded("WeakAuras")) or not NUI.db.global.profiles then
 							return true
 						end
 					end,
@@ -227,7 +228,7 @@ NUI.options = {
 					name = "Wipe WeakAuras",
 					desc = "Wipe all current WeakAuras",
 					hidden = function()
-						if not NUI:IsAddOnEnabled("WeakAuras") then
+						if not C_AddOns_IsAddOnLoaded("WeakAuras") then
 							return true
 						end
 					end,
