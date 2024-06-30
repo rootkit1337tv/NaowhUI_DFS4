@@ -2,7 +2,6 @@ local NaowhUI = select(2, ...)
 local NUI = unpack(NaowhUI)
 
 local C_AddOns_IsAddOnLoaded = C_AddOns.IsAddOnLoaded
---local C_AddOns_IsAddOnLoaded = C_AddOns and C_AddOns.IsAddOnLoaded
 
 NUI.InstallerData = {
 	Title = format("%s %s", NUI.title, "Installation"),

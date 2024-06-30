@@ -10,7 +10,6 @@ local StaticPopupDialogs = StaticPopupDialogs
 local OnAccept = OnAccept
 local StaticPopup_Show = StaticPopup_Show
 local C_AddOns_IsAddOnLoaded = C_AddOns.IsAddOnLoaded
---local C_AddOns_IsAddOnLoaded = C_AddOns and C_AddOns.IsAddOnLoaded
 local CommReceived
 
 NUI.title = format("|cff0091edNaowh|r|cffffa300UI|r")

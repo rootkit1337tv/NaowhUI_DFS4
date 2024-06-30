@@ -2,7 +2,7 @@ local NaowhUI = select(2, ...)
 local NUI = unpack(NaowhUI)
 
 local C_AddOns_IsAddOnLoaded = C_AddOns.IsAddOnLoaded
---local C_AddOns_IsAddOnLoaded = C_AddOns and C_AddOns.IsAddOnLoaded
+local WeakAuras_Import = WeakAuras.Import
 local ReloadUI = ReloadUI
 
 NUI.options = {
@@ -161,79 +161,79 @@ NUI.options = {
 					name = "Death Knight",
 					desc = "Import the Death Knight Class WeakAura",
 					type = "execute",
-					func = function() WeakAuras.Import(NUI.WeakAurasDeathKnightData) end
+					func = function() WeakAuras_Import(NUI.WeakAurasDeathKnightData) end
 				},
 				demonhunter = {
 					name = "Demon Hunter",
 					desc = "Import the Demon Hunter Class WeakAura",
 					type = "execute",
-					func = function() WeakAuras.Import(NUI.WeakAurasDemonHunterData) end
+					func = function() WeakAuras_Import(NUI.WeakAurasDemonHunterData) end
 				},
 				druid = {
 					name = "Druid",
 					desc = "Import the Druid Class WeakAura",
 					type = "execute",
-					func = function() WeakAuras.Import(NUI.WeakAurasDruidData) end
+					func = function() WeakAuras_Import(NUI.WeakAurasDruidData) end
 				},
 				evoker = {
 					name = "Evoker",
 					desc = "Import the Evoker Class WeakAura",
 					type = "execute",
-					func = function() WeakAuras.Import(NUI.WeakAurasEvokerData) end
+					func = function() WeakAuras_Import(NUI.WeakAurasEvokerData) end
 				},
 				hunter = {
 					name = "Hunter",
 					desc = "Import the Hunter Class WeakAura",
 					type = "execute",
-					func = function()WeakAuras.Import(NUI.WeakAurasHunterData) end
+					func = function() WeakAuras_Import(NUI.WeakAurasHunterData) end
 				},
 				mage = {
 					name = "Mage",
 					desc = "Import the Mage Class WeakAura",
 					type = "execute",
-					func = function() WeakAuras.Import(NUI.WeakAurasMageData) end
+					func = function() WeakAuras_Import(NUI.WeakAurasMageData) end
 				},
 				monk = {
 					name = "Monk",
 					desc = "Import the Monk Class WeakAura",
 					type = "execute",
-					func = function() WeakAuras.Import(NUI.WeakAurasMonkData) end
+					func = function() WeakAuras_Import(NUI.WeakAurasMonkData) end
 				},
 				paladin = {
 					name = "Paladin",
 					desc = "Import the Paladin Class WeakAura",
 					type = "execute",
-					func = function() WeakAuras.Import(NUI.WeakAurasPaladinData) end
+					func = function() WeakAuras_Import(NUI.WeakAurasPaladinData) end
 				},
 				priest = {
 					name = "Priest",
 					desc = "Import the Priest Class WeakAura",
 					type = "execute",
-					func = function() WeakAuras.Import(NUI.WeakAurasPriestData) end
+					func = function() WeakAuras_Import(NUI.WeakAurasPriestData) end
 				},
 				rogue = {
 					name = "Rogue",
 					desc = "Import the Rogue Class WeakAura",
 					type = "execute",
-					func = function() WeakAuras.Import(NUI.WeakAurasRogueData) end
+					func = function() WeakAuras_Import(NUI.WeakAurasRogueData) end
 				},
 				shaman = {
 					name = "Shaman",
 					desc = "Import the Shaman Class WeakAura",
 					type = "execute",
-					func = function() WeakAuras.Import(NUI.WeakAurasShamanData) end
+					func = function() WeakAuras_Import(NUI.WeakAurasShamanData) end
 				},
 				warlock = {
 					name = "Warlock",
 					desc = "Import the Warlock Class WeakAura",
 					type = "execute",
-					func = function() WeakAuras.Import(NUI.WeakAurasWarlockData) end
+					func = function() WeakAuras_Import(NUI.WeakAurasWarlockData) end
 				},
 				warrior = {
 					name = "Warrior",
 					desc = "Import the Warrior Class WeakAura",
 					type = "execute",
-					func = function() WeakAuras.Import(NUI.WeakAurasWarriorData) end
+					func = function() WeakAuras_Import(NUI.WeakAurasWarriorData) end
 				}
 			}
 		},
