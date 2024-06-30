@@ -1,9 +1,9 @@
 ## Title: |cff0091edNaowh|r|cffffa300UI|r
 ## Notes: NaowhUI
 ## Author: rootkit1337
-## Version: 99999999
+## Version: 20240723.01
 ## SavedVariables: NaowhDB
-## Interface: 11502
+## Interface: 11503
 
 embeds.xml
 

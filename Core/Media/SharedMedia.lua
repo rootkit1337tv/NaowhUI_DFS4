@@ -103,7 +103,7 @@ LSM:Register(MediaType_SOUND, "|cff0091edTurn -Naowh|r", [[Interface\Addons\Naow
 
 LSM:Register(MediaType_STATUSBAR, "ElvUI Blank",			[[Interface\Addons\NaowhUI\Core\Media\Textures\White8x8]])
 LSM:Register(MediaType_STATUSBAR, "Melli",					[[Interface\Addons\NaowhUI\Core\Media\Textures\Melli]])
-LSM:Register(MediaType_STATUSBAR, "Naowh",					[[Interface\Addons\NaowhUI\Core\Media\Textures\Naowh]])
-LSM:Register(MediaType_STATUSBAR, "NaowhMouseover",			[[Interface\Addons\NaowhUI\Core\Media\Textures\NaowhMouseover]])
-LSM:Register(MediaType_STATUSBAR, "NaowhReverse",			[[Interface\Addons\NaowhUI\Core\Media\Textures\NaowhReverse]])
-LSM:Register(MediaType_STATUSBAR, "NaowhTarget",			[[Interface\Addons\NaowhUI\Core\Media\Textures\NaowhTarget]])
+LSM:Register(MediaType_STATUSBAR, "Naowh Left",				[[Interface\Addons\NaowhUI\Core\Media\Textures\Naowh_left]])
+LSM:Register(MediaType_STATUSBAR, "Naowh Mouseover",		[[Interface\Addons\NaowhUI\Core\Media\Textures\Naowh_overlay_mouseover_1]])
+LSM:Register(MediaType_STATUSBAR, "Naowh Right",			[[Interface\Addons\NaowhUI\Core\Media\Textures\Naowh_right]])
+LSM:Register(MediaType_STATUSBAR, "Naowh Target",			[[Interface\Addons\NaowhUI\Core\Media\Textures\Naowh_overlay_target_1]])

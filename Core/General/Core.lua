@@ -6,11 +6,11 @@ local format = format
 
 local ReloadUI = ReloadUI
 
-local C_AddOns_GetAddOnEnableState = C_AddOns and C_AddOns.GetAddOnEnableState
-
 local StaticPopupDialogs = StaticPopupDialogs
 local OnAccept = OnAccept
 local StaticPopup_Show = StaticPopup_Show
+local C_AddOns_IsAddOnLoaded = C_AddOns.IsAddOnLoaded
+--local C_AddOns_IsAddOnLoaded = C_AddOns and C_AddOns.IsAddOnLoaded
 local CommReceived
 
 NUI.title = format("|cff0091edNaowh|r|cffffa300UI|r")
@@ -37,26 +37,16 @@ local function DoubleConfirmation(PassedFunction)
 	StaticPopup_Show("DoubleConfirmation")
 end
 
-function NUI:IsAddOnEnabled(addon)
-	if C_AddOns_GetAddOnEnableState then
-		return C_AddOns_GetAddOnEnableState(addon, self.myname) == 2
-	else
-		return GetAddOnEnableState(self.myname, addon) == 2
-	end
-end
-
 function NUI:OpenToCategory()
-	local InterfaceOptionsFrame_OpenToCategory = InterfaceOptionsFrame_OpenToCategory
-
-	if InterfaceOptionsFrame_OpenToCategory then
-		InterfaceOptionsFrame_OpenToCategory("NaowhUI")
-	else
+	if NUI.Retail then
 		Settings.OpenToCategory("NaowhUI")
+	else
+		InterfaceOptionsFrame_OpenToCategory("NaowhUI")
 	end
 end
 
 function NUI:RunInstaller()
-	if self:IsAddOnEnabled("ElvUI") then
+	if C_AddOns_IsAddOnLoaded("ElvUI") then
 		local E = unpack(ElvUI)
 
 		E:GetModule("PluginInstaller"):Queue(self.InstallerData)
@@ -69,9 +59,9 @@ function NUI:LoadProfiles(PassedProfiles, import)
 	local PassedProfiles = PassedProfiles or NUI.db.global.profiles
 
 	for k,v in pairs(PassedProfiles) do
-		if NUI:IsAddOnEnabled(k) and k == "ElvUI" and type(v) == "string" then
+		if C_AddOns_IsAddOnLoaded(k) and k == "ElvUI" and type(v) == "string" then
 			NUI:Setup(k, import, v)
-		elseif NUI:IsAddOnEnabled(k) then
+		elseif C_AddOns_IsAddOnLoaded(k) then
 			NUI:Setup(k, import)
 		end
 	end
@@ -88,7 +78,7 @@ function NUI:LoadProfiles(PassedProfiles, import)
 end
 
 function NUI:Initialize()
-	if self:IsAddOnEnabled("Details") then
+	if C_AddOns_IsAddOnLoaded("Details") then
 		local _detalhes = _detalhes
 
 		if _detalhes.is_first_run then
@@ -108,7 +98,7 @@ function NUI:Initialize()
 		end
 	end
 
-	if self:IsAddOnEnabled("ElvUI") then
+	if C_AddOns_IsAddOnLoaded("ElvUI") then
 		local E = unpack(ElvUI)
 
 		if E.InstallFrame and E.InstallFrame:IsShown() then

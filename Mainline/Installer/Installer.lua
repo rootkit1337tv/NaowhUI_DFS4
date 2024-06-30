@@ -1,6 +1,9 @@
 local NaowhUI = select(2, ...)
 local NUI = unpack(NaowhUI)
 
+local C_AddOns_IsAddOnLoaded = C_AddOns.IsAddOnLoaded
+--local C_AddOns_IsAddOnLoaded = C_AddOns and C_AddOns.IsAddOnLoaded
+
 NUI.InstallerData = {
 	Title = format("%s %s", NUI.title, "Installation"),
 	Name = NUI.title,
@@ -37,7 +40,7 @@ NUI.InstallerData = {
 			PluginInstallFrame.Option2:SetText("Dark")
 		end,
 		[3] = function()
-			if NUI:IsAddOnEnabled("BigWigs") then
+			if C_AddOns_IsAddOnLoaded("BigWigs") then
 				PluginInstallFrame.SubTitle:SetText("BigWigs")
 				PluginInstallFrame.Desc1:SetText("Click on the button below to setup Naowh's BigWigs profile.")
 				PluginInstallFrame.Option1:Show()
@@ -48,7 +51,7 @@ NUI.InstallerData = {
 			end
 		end,
 		[4] = function()
-			if NUI:IsAddOnEnabled("Details") then
+			if C_AddOns_IsAddOnLoaded("Details") then
 				PluginInstallFrame.SubTitle:SetText("Details")
 				PluginInstallFrame.Desc1:SetText("Click on the button below to setup Naowh's Details profile.")
 				PluginInstallFrame.Option1:Show()
@@ -59,7 +62,7 @@ NUI.InstallerData = {
 			end
 		end,
 		[5] = function()
-			if NUI:IsAddOnEnabled("HidingBar") then
+			if C_AddOns_IsAddOnLoaded("HidingBar") then
 				PluginInstallFrame.SubTitle:SetText("HidingBar")
 				PluginInstallFrame.Desc1:SetText("Click on the button below to setup Naowh's HidingBar profile.")
 				PluginInstallFrame.Option1:Show()
@@ -70,7 +73,7 @@ NUI.InstallerData = {
 			end
 		end,
 		[6] = function()
-			if NUI:IsAddOnEnabled("MRT") then
+			if C_AddOns_IsAddOnLoaded("MRT") then
 				PluginInstallFrame.SubTitle:SetText("MRT")
 				PluginInstallFrame.Desc1:SetText("Click on the button below to setup Naowh's MRT profile.")
 				PluginInstallFrame.Option1:Show()
@@ -81,7 +84,7 @@ NUI.InstallerData = {
 			end
 		end,
 		[7] = function()
-			if NUI:IsAddOnEnabled("NameplateAuras") then
+			if C_AddOns_IsAddOnLoaded("NameplateAuras") then
 				PluginInstallFrame.SubTitle:SetText("NameplateAuras")
 				PluginInstallFrame.Desc1:SetText("Click on the button below to setup Naowh's NameplateAuras profile.")
 				PluginInstallFrame.Option1:Show()
@@ -92,7 +95,7 @@ NUI.InstallerData = {
 			end
 		end,
 		[8] = function()
-			if NUI:IsAddOnEnabled("OmniCD") then
+			if C_AddOns_IsAddOnLoaded("OmniCD") then
 				PluginInstallFrame.SubTitle:SetText("OmniCD")
 				PluginInstallFrame.Desc1:SetText("Click on the button below to setup Naowh's OmniCD profile.")
 				PluginInstallFrame.Option1:Show()
@@ -103,7 +106,7 @@ NUI.InstallerData = {
 			end
 		end,
 		[9] = function()
-			if NUI:IsAddOnEnabled("Plater") then
+			if C_AddOns_IsAddOnLoaded("Plater") then
 				PluginInstallFrame.SubTitle:SetText("Plater")
 				PluginInstallFrame.Desc1:SetText("Click on the button below to setup Naowh's Plater profile.")
 				PluginInstallFrame.Option1:Show()
@@ -114,7 +117,7 @@ NUI.InstallerData = {
 			end
 		end,
 		[10] = function()
-			if NUI:IsAddOnEnabled("WarpDeplete") then
+			if C_AddOns_IsAddOnLoaded("WarpDeplete") then
 				PluginInstallFrame.SubTitle:SetText("WarpDeplete")
 				PluginInstallFrame.Desc1:SetText("Click on the button below to setup Naowh's WarpDeplete profile.")
 				PluginInstallFrame.Option1:Show()
@@ -125,7 +128,7 @@ NUI.InstallerData = {
 			end
 		end,
 		[11] = function()
-			if NUI:IsAddOnEnabled("WeakAuras") then
+			if C_AddOns_IsAddOnLoaded("WeakAuras") then
 				PluginInstallFrame.SubTitle:SetText("WeakAuras")
 				PluginInstallFrame.Desc1:SetText("Click on the button below to setup Naowh's WeakAuras.")
 				PluginInstallFrame.Option1:Show()
@@ -136,7 +139,7 @@ NUI.InstallerData = {
 			end
 		end,
 		[12] = function()
-			if NUI:IsAddOnEnabled("WeakAuras") then
+			if C_AddOns_IsAddOnLoaded("WeakAuras") then
 				PluginInstallFrame.SubTitle:SetText("Class WeakAuras")
 				PluginInstallFrame.Desc1:SetText("Click on the button below to select your Class WeakAuras.")
 				PluginInstallFrame.Option1:Show()

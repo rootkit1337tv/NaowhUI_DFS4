@@ -1,5 +1,5 @@
 local _G = _G
---
+
 local AceAddon = _G.LibStub("AceAddon-3.0")
 
 local AddOnName, Engine = ...
@@ -8,6 +8,8 @@ local NUI = AceAddon:NewAddon(AddOnName, "AceComm-3.0", "AceConsole-3.0", "AceEv
 Engine[1] = NUI
 Engine[2] = {}
 _G.NaowhUI = Engine
+
+NUI.Retail = WOW_PROJECT_ID == WOW_PROJECT_MAINLINE
 
 do
 	function NUI:AddonCompartmentFunc()
@@ -30,12 +32,12 @@ function NUI:OnInitialize()
 
 	self.db = LibStub("AceDB-3.0"):New("NaowhDB")
 
-	if (self.db.global and not self.db.global.version) or type(self.db.global.version) == "string" or (self.db.global.version <= 20240501 or self.db.global.version == 99999999) then
+	if (self.db.global and not self.db.global.version) or type(self.db.global.version) == "string" or (self.db.global.version <= 20240723 or self.db.global.version == 99999999) then
 		self.db:ResetDB()
 	end
 
 	for _,v in ipairs(IncompatibleAddOns) do
-		if self:IsAddOnEnabled(v) then
+		if C_AddOns.IsAddOnLoaded(v) then
 			C_AddOns.DisableAddOn(v)
 		end
 	end
